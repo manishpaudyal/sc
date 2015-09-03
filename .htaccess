@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+#RewriteBase /~admin262/
+
+RewriteCond $1 !^(assets|favicon\.ico|robots\.txt|index\.php) [NC]
+
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+</IfModule>
